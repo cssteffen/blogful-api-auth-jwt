@@ -132,7 +132,7 @@ describe("Articles Endpoints", function() {
         return (
           supertest(app)
             .get(`/api/articles/${maliciousArticle.id}`)
-            //us the testUser seeded above
+            //use the testUser seeded above
             .set("Authorization", helpers.makeAuthHeader(testUser))
             .expect(200)
             .expect(res => {
